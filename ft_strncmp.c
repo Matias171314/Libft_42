@@ -37,10 +37,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /* #include <stdio.h>
 int	main(void)
 {
-	printf("Compare 'Hello' and 'Hello' (5): %d\n", ft_strncmp("Hello", "Hello", 5)); // Expected: 0
-	printf("Compare 'Hello' and 'Hellp' (5): %d\n", ft_strncmp("Hello", "Hellp", 5)); // Expected: negative value
-	printf("Compare 'Hello' and 'Hell' (5): %d\n", ft_strncmp("Hello", "Hell", 5));   // Expected: positive value
-	printf("Compare 'Apple' and 'ApPle' (5): %d\n", ft_strncmp("Apple", "ApPle", 5)); // Expected: positive value
-	printf("Compare 'Test' and 'Test' (0): %d\n", ft_strncmp("Test", "Test", 0));     // Expected: 0
+	printf("Cmp 'Hello' & 'Hello' (5): %d\n", ft_strncmp("Hello", "Hello", 5));
+	// Expected: 0
+	printf("Cmp 'Hello' & 'Hellp' (5): %d\n", ft_strncmp("Hello", "Hellp", 5));
+	// Expected: negative value
+	printf("Cmp 'Hello' & 'Hell' (5): %d\n", ft_strncmp("Hello", "Hell", 5));
+	// Expected: positive value
+	printf("Cmp 'Apple' & 'ApPle' (5): %d\n", ft_strncmp("Apple", "ApPle", 5));
+	// Expected: positive value
+	printf("Cmp 'Test' & 'Test' (0): %d\n", ft_strncmp("Test", "Test", 0));
+	// Expected: 0
 	return (0);
 } */
