@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates and returns a substring from the string 's'.
+ *        The substring begins at index 'start' and is of maximum length 'len'.
+ * @param s The original string.
+ * @param start The starting index for the substring.
+ * @param len The maximum length of the substring.
+ * @return A pointer to the newly allocated substring, or NULL if
+ *         allocation fails.
+ */
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -37,3 +47,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+/* #include <stdio.h>
+int	main(void)
+{
+	char	*str = "Hello, World!";
+	char	*substr;
+	substr = ft_substr(str, 7, 5);
+	if (substr)
+	{
+		printf("Substring: %s\n", substr);
+		free(substr);
+	}
+	return (0);
+} */
