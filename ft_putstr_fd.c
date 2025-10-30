@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:36:43 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 18:36:46 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:43:40 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@
  * @param fd The file descriptor where the string will be written.
  */
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (s == NULL)
-        return;
-    while (*s)
-    {
-        ft_putchar_fd(*s, fd);
-        s++;
-    }
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
 
 /* #include <fcntl.h>

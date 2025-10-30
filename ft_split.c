@@ -3,89 +3,107 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:25:21 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 18:25:21 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:35:25 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Incomplete function prototype
-
 /**
- * @brief Counts the number of words in a string separated by a given delimiter.
- * @param s The input string.
- * @param c The delimiter character.
- * @return The number of words found in the string.
- */
+* @brief Splits the string 's' using the delimiter 'c' into an array of strings.
+* @param s The string to split.
+* @param c The delimiter character.
+* @return An array of strings (NULL-terminated), or NULL if allocation fails.
+*/
 
-static int	wordcount(const char *s, char c);
+#include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static int	count_words(const char *s, char c)
 {
-	char	**result;
-	size_t	i;
-	size_t	j;
-	size_t	k;
-
-	if (!s || !(result = (char **)malloc(sizeof(char *) * (wordcount(s, c) + 1))))
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (s[i] != c)
-		{
-			k = i;
-			while (s[k] && s[k] != c)
-				k++;
-			result[j++] = ft_substr(s, i, k - i);
-			i = k;
-		}
-		else
-			i++;
-	}
-	result[j] = NULL;
-	return (result);
-}
-
-// Helper function to count words
-int wordcount(const char *s, char c)
-{
-	size_t	count;
-	size_t	i;
+	int	count;
+	int	in_word;
 
 	count = 0;
-	i = 0;
-	while (s[i])
+	in_word = 0;
+	while (*s)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i] && s[i] != c)
+		if (*s != c && !in_word)
 		{
+			in_word = 1;
 			count++;
-			while (s[i] && s[i] != c)
-				i++;
 		}
+		else if (*s == c)
+			in_word = 0;
+		s++;
 	}
 	return (count);
 }
 
-void	free_split(char **split)
+static char	*word_dup(const char *s, int start, int end)
 {
-	size_t	i;
+	char	*word;
+	int		i;
 
-	if (!split)
-		return ;
+	word = malloc(end - start + 1);
+	if (!word)
+		return (NULL);
 	i = 0;
-	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
+	while (start < end)
+		word[i++] = s[start++];
+	word[i] = '\0';
+	return (word);
 }
 
+static void	split_words(char **res, const char *s, char c)
+{
+	size_t	i;
+	int		j;
+	int		index;
 
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || s[i] == '\0') && index >= 0)
+		{
+			res[j++] = word_dup(s, index, i);
+			index = -1;
+		}
+		i++;
+	}
+	res[j] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+
+	if (!s)
+		return (NULL);
+	res = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	split_words(res, s, c);
+	return (res);
+}
+
+/* 
+#include <stdio.h>
+
+int	main(void)
+{
+	char **arr = ft_split("Hello 42 Madrid", ' ');
+	for (int i = 0; arr[i]; i++)
+		printf("[%s]\n", arr[i]);
+	// Expected: [Hello] [42] [Madrid]
+	for (int i = 0; arr[i]; i++)
+		free(arr[i]);
+	free(arr);
+}
+ */
