@@ -6,18 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:07:40 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/30 00:13:04 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:52:48 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Deletes and frees all nodes of the list using 'del',
-**        and sets the list pointer to NULL.
-** @param lst The address of a pointer to the first node.
-** @param del The function to delete the content of each node.
-*/
+/**
+ * @brief Elimina y libera todos los nodos de una lista enlazada.
+ * @param lst Puntero al puntero del primer nodo de la lista.
+ * @param del Función para liberar el contenido de cada nodo.
+ */
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
@@ -32,20 +32,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 static void	del_content(void *content)
 {
 	free(content);
 }
-
 int	main(void)
 {
 	t_list *a = ft_lstnew(ft_strdup("One"));
 	t_list *b = ft_lstnew(ft_strdup("Two"));
 	a->next = b;
 	ft_lstclear(&a, del_content);
-	printf("List cleared: %p\n", (void *)a); // Expected: NULL
-}
- */
+	printf("Lista: %p\n", (void *)a);	// Esperado: NULL
+} */

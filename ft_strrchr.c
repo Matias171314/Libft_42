@@ -6,19 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:17:22 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 03:10:08 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:34:56 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Locates the last occurrence of c (converted to a char) in the string
- *        pointed to by s.
- * @param s Pointer to the string to be searched.
- * @param c The character to locate (as an int, but treated as a char).
- * @return A pointer to the last occurrence of c in s, or NULL if c is not
- *         found.
+ * @brief Localiza la última aparición del carácter c en la cadena s.
+ * @param s Puntero a la cadena a buscar.
+ * @param c El carácter a localizar (como un int, pero tratado como un char).
+ * @return Un puntero a la última aparición de c en s, o NULL si c no se
+ *         encuentra.
 */
 
 char	*ft_strrchr(const char *s, int c)
@@ -44,14 +43,14 @@ int	main(void)
 	char ch = 'o';
 	char *result = ft_strrchr(str, ch);
 	if (result)
-		printf("Last occurrence of '%c': %s\n", ch, result);
+		printf("Ultima aparición de '%c': %s\n", ch, result);
 	else
-		printf("Character '%c' not found.\n", ch);
+		printf("Caracter '%c' no encontrado.\n", ch);
 	ch = 'z';
 	result = ft_strrchr(str, ch);
 	if (result)
-		printf("Last occurrence of '%c': %s\n", ch, result);
+		printf("Ultima aparición de '%c': %s\n", ch, result);
 	else
-		printf("Character '%c' not found.\n", ch);
+		printf("Caracter '%c' no encontrado.\n", ch);
 	return (0);
 } */

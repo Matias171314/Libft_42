@@ -6,17 +6,17 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 02:19:20 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 01:09:39 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/01 20:55:47 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Checks if the given character is alphanumeric.
- * @param c The character to check.
- * @return Returns 1 if the character is alphanumeric (A-Z, a-z,
- *         or 0-9), otherwise returns 0.
+ * @brief Comprueba si el carácter dado es alfanumérico (A-Z, a-z o 0-9).
+ * @param c El carácter a comprobar, representado como un entero.
+ * @return Retorna 1 si el carácter es alfanumérico (A-Z, a-z o 0-9),
+ *         de lo contrario retorna 0.
  */
 
 int	ft_isalnum(int c)
@@ -29,10 +29,10 @@ int	ft_isalnum(int c)
 /* #include <stdio.h>
 int	main(void)
 {
-	printf("'A' -> %d\n", ft_isalnum('A'));   // Expected: 1
-	printf("'z' -> %d\n", ft_isalnum('z'));   // Expected: 1
-	printf("'5' -> %d\n", ft_isalnum('5'));   // Expected: 1
-	printf("'#' -> %d\n", ft_isalnum('#'));   // Expected: 0
-	printf("' ' -> %d\n", ft_isalnum(' '));   // Expected: 0
+	printf("'A' -> %d\n", ft_isalnum('A'));	// Esperado: 1
+	printf("'z' -> %d\n", ft_isalnum('z'));	// Esperado: 1
+	printf("'5' -> %d\n", ft_isalnum('5'));	// Esperado: 1
+	printf("'#' -> %d\n", ft_isalnum('#'));	// Esperado: 0
+	printf("' ' -> %d\n", ft_isalnum(' '));	// Esperado: 0
 	return (0);
 } */

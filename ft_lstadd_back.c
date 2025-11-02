@@ -6,17 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:07:36 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/30 00:17:49 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:53:13 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Adds the node 'new' at the end of the list.
-** @param lst The address of a pointer to the first node.
-** @param new The node to add.
-*/
+/**
+ * @brief Añade el nodo 'new' al final de la lista enlazada apuntada por 'lst'.
+ * @param lst Puntero al puntero de la cabeza de la lista enlazada.
+ * @param new El nodo a añadir a la lista.
+ */
+
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
@@ -32,9 +33,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last->next = new;
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 int	main(void)
 {
 	t_list *a = ft_lstnew("One");
@@ -47,5 +46,4 @@ int	main(void)
 	free(c);
 	free(b);
 	free(a);
-}
- */
+} */

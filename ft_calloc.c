@@ -6,18 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 17:09:02 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 03:23:38 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:26:47 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Allocates memory for an array of count elements of size bytes each
- *        and initializes all bytes to zero.
- * @param count Number of elements.
- * @param size Size of each element in bytes.
- * @return A pointer to the allocated memory, or NULL if the allocation fails.
+ * @brief Asigna memoria para un número específico de elementos de un
+ *        tamaño dado e inicializa toda la memoria asignada a cero.
+ * @param count Número de elementos.
+ * @param size Tamaño de cada elemento en bytes.
+ * @return Un puntero a la memoria asignada, o NULL si la asignación falla.
 */
 
 void	*ft_calloc(size_t count, size_t size)
@@ -38,11 +38,10 @@ int	main(void)
 {
 	int	*arr;
 	size_t	i;
-
 	arr = ft_calloc(5, sizeof(int));
 	if (!arr)
 	{
-		printf("Memory allocation failed\n");
+		printf("Error: Memoria no asignada\n");
 		return (1);
 	}
 	for (i = 0; i < 5; i++)

@@ -6,20 +6,20 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 19:33:19 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 11:50:27 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:38:23 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Compares the first n bytes of the memory areas s1 and s2.
- * @param s1 Pointer to the first memory area.
- * @param s2 Pointer to the second memory area.
- * @param n Number of bytes to compare.
- * @return An integer less than, equal to, or greater than zero if the first n
- *         bytes of s1 is found, respectively, to be less than, to match, or
- *         be greater than the first n bytes of s2.
+ * @brief Compara dos áreas de memoria byte por byte.
+ * @param s1 Puntero a la primera área de memoria.
+ * @param s2 Puntero a la segunda área de memoria.
+ * @param n úmero de bytes a comparar.
+ * @return Un entero menor que, igual a, o mayor que cero si los primeros n
+ *         bytes de s1 se encuentran, respectivamente, en ser menores, coincidir,
+ *         o ser mayores que los primeros n bytes de s2.
  */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -48,7 +48,7 @@ int main() {
 	size_t n = 13;
 	int result_ft = ft_memcmp(str1, str2, n);
 	int result_std = memcmp(str1, str2, n);
-	printf("ft_memcmp result: %d\n", result_ft);
-	printf("memcmp result: %d\n", result_std);
+	printf("ft_memcmp resultado: %d\n", result_ft);
+	printf("memcmp resultado: %d\n", result_std);
 	return 0;
 } */

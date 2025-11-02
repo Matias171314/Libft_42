@@ -6,20 +6,21 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:35:20 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 02:32:07 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:11:47 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Copies up to dstsize - 1 characters from the string src to dst,
- *        null-terminating the result if dstsize is not 0.
- * @param dst Pointer to the destination string.
- * @param src Pointer to the source string.
- * @param dstsize The size of the destination buffer.
- * @return The total length of the string it tried to create,
- *         that is the length of src.
+ * @brief Copia una cadena de texto desde src a dst, asegurando que no se
+ *        sobrepase el tamaño del búfer dstsize. Siempre termina la cadena dst
+ *        con un carácter nulo si dstsize es mayor que 0.
+ * @param dst Puntero a la cadena de destino.
+ * @param src Puntero a la cadena de origen.
+ * @param dstsize El tamaño del búfer de destino.
+ * @return La longitud total de la cadena que intentó crear,
+ *         que es la longitud de src.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -46,6 +47,6 @@ int	main(void)
 	printf("src: \"%s\"\n", src);
 	size_t len = ft_strlcpy(dst, src, 9);
 	printf("dst: \"%s\"\n", dst);
-	printf("Returned length: %zu\n", len); // Expected: length of src
+	printf("Returned length: %zu\n", len);	// Esperado: longitud de src
 	return (0);
 } */

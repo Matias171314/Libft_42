@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:44:27 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 18:44:28 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:31:53 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Outputs the integer 'n' to the given file descriptor 'fd'.
- * @param n The integer to output.
- * @param fd The file descriptor where the integer will be written.
+ * @brief Escriba el número entero 'n' en el descriptor de archivo dado 'fd'.
+ * @param n El número entero a escribir.
+ * @param fd El descriptor de archivo donde se escribirá el número.
  */
 
 void	ft_putnbr_fd(int n, int fd)
@@ -45,7 +45,7 @@ int	main(void)
 	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd == -1)
 	{
-		perror("Error opening file");
+		perror("Error: No se pudo abrir el archivo");
 		return (1);
 	}
 	ft_putnbr_fd(12345, fd);

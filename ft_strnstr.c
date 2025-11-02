@@ -6,19 +6,19 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:44:33 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 11:43:19 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:39:12 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Locates the first occurrence of the null-terminated string 'little'
- *        in the string 'big', where not more than 'len' characters are searched.
- * @param big The string to be searched.
- * @param little The substring to search for.
- * @param len The maximum number of characters to search.
- * @return A pointer to the first occurrence of 'little' in 'big' within
+ * @brief Localiza la primera aparición de la subcadena 'little' en la
+ *        cadena 'big'
+ * @param little La subcadena a buscar.
+ * @param len El número máximo de caracteres a buscar.
+ * @return Un puntero a la primera aparición de 'little' en 'big' dentro de
+ *         los primeros 'len' caracteres, o NULL si no se encuentra.
  */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -51,8 +51,8 @@ int main()
 	size_t len = 25;
 	char *result = ft_strnstr(big, little, len);
 	if (result)
-		printf("Found: %s\n", result);
+		printf("Encontrado: %s\n", result);
 	else
-		printf("Not Found\n");
+		printf("No encontrado\n");
 	return 0;
 } */

@@ -6,17 +6,19 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:25:21 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/29 21:35:25 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:43:16 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-* @brief Splits the string 's' using the delimiter 'c' into an array of strings.
-* @param s The string to split.
-* @param c The delimiter character.
-* @return An array of strings (NULL-terminated), or NULL if allocation fails.
+* @brief Divide una cadena de texto en un array de cadenas, utilizando un
+*        delimitador.
+* @param s La cadena a dividir.
+* @param c El carácter delimitador.
+* @return Un puntero a un array de cadenas (NULL-terminado), o NULL si la
+*         asignación falla.
 */
 
 #include "libft.h"
@@ -93,17 +95,14 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 int	main(void)
 {
 	char **arr = ft_split("Hello 42 Madrid", ' ');
 	for (int i = 0; arr[i]; i++)
 		printf("[%s]\n", arr[i]);
-	// Expected: [Hello] [42] [Madrid]
+	// Esperado: [Hello] [42] [Madrid]
 	for (int i = 0; arr[i]; i++)
 		free(arr[i]);
 	free(arr);
-}
- */
+} */

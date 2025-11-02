@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvasquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:33:17 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 18:33:20 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:31:00 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Outputs the character 'c' to the given file descriptor 'fd'.
- * @param c The character to output.
- * @param fd The file descriptor where the character will be written.
+ * @brief Escribe el carácter c en el descriptor de archivo dado fd.
+ * @param c El carácter a escribir.
+ * @param fd El descriptor de archivo donde se escribirá el carácter.
  */
 
 void	ft_putchar_fd(char c, int fd)
@@ -31,7 +31,7 @@ int	main(void)
 	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd == -1)
 	{
-		perror("Error opening file");
+		perror("Error: No se pudo abrir el archivo");
 		return (1);
 	}
 	ft_putchar_fd('A', fd);

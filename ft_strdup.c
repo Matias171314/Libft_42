@@ -6,18 +6,17 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 17:09:05 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 03:26:10 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:14:55 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Duplicates the given string by allocating memory and copying the
- *        content.
- * @param s1 The string to duplicate.
- * @return A pointer to the newly allocated duplicate string, or NULL if
- *         allocation fails.
+ * @brief Duplica una cadena de texto asignando memoria dinámica para la 
+ *        nueva cadena.
+ * @param s1 La cadena a duplicar.
+ * @return Un puntero a la nueva cadena duplicada, o NULL si la asignación falla.
 */
 
 char	*ft_strdup(const char *s1)
@@ -48,12 +47,12 @@ int	main(void)
 	if (duplicate)
 	{
 		printf("Original: %s\n", original);
-		printf("Duplicate: %s\n", duplicate);
+		printf("Duplicado: %s\n", duplicate);
 		free(duplicate);
 	}
 	else
 	{
-		printf("Memory allocation failed\n");
+		printf("Error: Memoria no asignada\n");
 	}
 	return (0);
 } */

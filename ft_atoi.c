@@ -6,16 +6,16 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:51:06 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 12:15:41 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:24:25 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Converts a string to an integer.
- * @param str The string to be converted.
- * @return The converted integer value.
+ * @brief Convierte una cadena de caracteres a un valor entero (int).
+ * @param str La cadena a convertir.
+ * @return El valor entero convertido.
  */
 
 int	ft_atoi(const char *str)
@@ -45,6 +45,6 @@ int	ft_atoi(const char *str)
 int main() {
 	const char *str = "   -12345abc";
 	int result = ft_atoi(str);
-	printf("The converted integer is: %d\n", result);
+	printf("Conversión: %d\n", result);
 	return 0;
 } */

@@ -6,18 +6,20 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:09:30 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/29 21:40:54 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:42:02 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Trims all characters in 'set' from the beginning and end of 's1'.
-** @param s1 The string to trim.
-** @param set The set of characters to remove.
-** @return The trimmed string (malloc'ed), or NULL if allocation fails.
+/**
+* @brief Elimina los caracteres especificados en 'set' desde el inicio y el final
+*        de la cadena 's1'.
+* @param s1 La cadena a recortar.
+* @param set El conjunto de caracteres a eliminar.
+* @return La cadena recortada (malloc'ed), o NULL si la asignación falla.
 */
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -41,7 +43,7 @@ int	main(void)
 {
 	char *s = "   ---Hello 42---   ";
 	char *trim = ft_strtrim(s, " -");
-	printf("Trimmed: '%s'\n", trim); // Expected: "Hello 42"
+	printf("Trimmed: '%s'\n", trim); // Esperado: "Hello 42"
 	free(trim);
 }
 */

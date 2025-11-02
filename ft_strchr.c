@@ -6,19 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:11:41 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/28 03:19:51 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:34:17 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Locates the first occurrence of c (converted to a char) in the string
- *        pointed to by s.
- * @param s Pointer to the string to be searched.
- * @param c The character to locate (as an int, but treated as a char).
- * @return A pointer to the first occurrence of c in s, or NULL if c is not
- *         found.
+ * @brief Localiza la primera aparición del carácter c en la cadena s.
+ * @param s Puntero a la cadena a buscar.
+ * @param c El carácter a localizar (como un int, pero tratado como un char).
+ * @return Un puntero a la primera aparición de c en s, o NULL si c no se
+ *         encuentra.
 */
 
 char	*ft_strchr(const char *s, int c)
@@ -41,14 +40,14 @@ int	main(void)
 	char ch = 'o';
 	char *result = ft_strchr(str, ch);
 	if (result)
-		printf("First occurrence of '%c': %s\n", ch, result);
+		printf("Primer aparición de '%c': %s\n", ch, result);
 	else
-		printf("Character '%c' not found.\n", ch);
+		printf("Caracter '%c' no encontrado.\n", ch);
 	ch = 'z';
 	result = ft_strchr(str, ch);
 	if (result)
-		printf("First occurrence of '%c': %s\n", ch, result);
+		printf("Primer aparición de '%c': %s\n", ch, result);
 	else
-		printf("Character '%c' not found.\n", ch);
+		printf("Caracter '%c' no encontrado.\n", ch);
 	return (0);
 } */

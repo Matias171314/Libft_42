@@ -6,17 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:46:26 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/29 21:29:50 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:44:14 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Converts an integer to a string (malloc-allocated).
-** @param n The integer to convert.
-** @return A string representing the integer (must be freed).
-*/
+/**
+ * @brief Convierte un número entero en una cadena de caracteres.
+ * @param n El número entero a convertir.
+ * @return Un puntero a la cadena de caracteres resultante, o NULL si la
+ *         asignación falla.
+ */
 static int	ft_numlen(long n)
 {
 	int	len;
@@ -60,9 +61,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 int	main(void)
 {
 	char *s1 = ft_itoa(42);
@@ -70,5 +69,4 @@ int	main(void)
 	printf("%s\n%s\n", s1, s2);
 	free(s1);
 	free(s2);
-}
- */
+} */

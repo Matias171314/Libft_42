@@ -6,20 +6,20 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 12:15:09 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/27 12:15:38 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:40:36 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Allocates and returns a substring from the string 's'.
- *        The substring begins at index 'start' and is of maximum length 'len'.
- * @param s The original string.
- * @param start The starting index for the substring.
- * @param len The maximum length of the substring.
- * @return A pointer to the newly allocated substring, or NULL if
- *         allocation fails.
+ * @brief Asigna y devuelve una subcadena de la cadena 's'. La subcadena 
+ *        comienza en el índice 'start' y tiene una longitud máxima de 'len'.
+ * @param s La cadena original.
+ * @param start El índice de inicio para la subcadena.
+ * @param len La longitud máxima de la subcadena.
+ * @return Un puntero a la nueva subcadena asignada, o NULL si
+ *         la asignación falla.
  */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

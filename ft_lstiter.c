@@ -6,18 +6,19 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:07:45 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/30 00:13:10 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:51:16 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Iterates the list and applies the function 'f'
-**        to the content of each node.
-** @param lst The beginning of the list.
-** @param f The function to apply to each node's content.
-*/
+/**
+ * @brief Itera sobre cada nodo de la lista enlazada 'lst' y aplica la función
+ *        'f' al contenido de cada nodo.
+ * @param lst Puntero al primer nodo de la lista enlazada.
+ * @param f Función a aplicar a cada contenido de los nodos.
+ */
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
@@ -29,9 +30,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 static void	print_upper(void *content)
 {
 	char *str = (char *)content;
@@ -42,7 +41,6 @@ static void	print_upper(void *content)
 	}
 	ft_putchar_fd('\n', 1);
 }
-
 int	main(void)
 {
 	t_list *a = ft_lstnew("hello");
@@ -51,5 +49,4 @@ int	main(void)
 	ft_lstiter(a, print_upper);
 	free(b);
 	free(a);
-}
- */
+} */

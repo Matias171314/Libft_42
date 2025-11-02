@@ -6,18 +6,18 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:07:43 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/10/30 00:12:58 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:51:41 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* 
-** @brief Frees the memory of the node's content using 'del',
-**        then frees the node itself.
-** @param lst The node to free.
-** @param del The function to delete the content of the node.
-*/
+/**
+ * @brief Elimina y libera un nodo específico de una lista enlazada.
+ * @param lst Puntero al nodo a eliminar.
+ * @param del Función para liberar el contenido del nodo.
+ */
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
@@ -26,18 +26,14 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 }
 
-/* 
-#include <stdio.h>
-
+/* #include <stdio.h>
 static void	del_content(void *content)
 {
 	free(content);
 }
-
 int	main(void)
 {
 	char *data = ft_strdup("Delete me!");
 	t_list *node = ft_lstnew(data);
 	ft_lstdelone(node, del_content);
-}
- */
+} */
