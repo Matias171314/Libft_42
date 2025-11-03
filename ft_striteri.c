@@ -6,7 +6,7 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:46:51 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 13:47:10 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/03 03:22:05 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ int	main(void)
 {
 	char str[] = "libft project";
 	ft_striteri(str, to_upper_inplace);
-	printf("Modified: %s\n", str); // Esperado: "LIBFT PROJECT"
+	printf("Modificado: %s\n", str); // Esperado: "LIBFT PROJECT"
 } */

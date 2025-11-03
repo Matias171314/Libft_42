@@ -6,7 +6,7 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:44:33 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 13:39:12 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 20:06:33 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
  * @brief Localiza la primera aparición de la subcadena 'little' en la
  *        cadena 'big'
  * @param little La subcadena a buscar.
+ * @param big La cadena donde se busca.
  * @param len El número máximo de caracteres a buscar.
  * @return Un puntero a la primera aparición de 'little' en 'big' dentro de
  *         los primeros 'len' caracteres, o NULL si no se encuentra.

@@ -6,7 +6,7 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:35:20 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 12:11:47 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 19:27:42 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(void)
 	char src[] = "Hello 42 Madrid";
 	char dst[8];
 	printf("src: \"%s\"\n", src);
-	size_t len = ft_strlcpy(dst, src, 9);
+	size_t len = ft_strlcpy(dst, src, 8);
 	printf("dst: \"%s\"\n", dst);
 	printf("Returned length: %zu\n", len);	// Esperado: longitud de src
 	return (0);

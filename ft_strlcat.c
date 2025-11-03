@@ -6,7 +6,7 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:48:39 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 13:30:37 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/02 19:32:42 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (dstsize == 0)
+	if (dstsize < 1)
 		return (src_len);
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);

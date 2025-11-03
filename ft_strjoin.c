@@ -6,14 +6,15 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:53:23 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 13:41:04 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/03 09:09:03 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Asigna y devuelve una nueva cadena que es la concatenación de 's1' y 's2'.
+ * @brief Asigna y devuelve una nueva cadena que es la concatenación de 
+ *        's1' y 's2'.
  * @param s1 La primera cadena.
  * @param s2 La segunda cadena.
  * @return Un puntero a la nueva cadena asignada, o NULL si

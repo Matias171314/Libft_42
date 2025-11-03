@@ -6,7 +6,7 @@
 /*   By: mvasquez <mvasquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:25:21 by mvasquez          #+#    #+#             */
-/*   Updated: 2025/11/02 13:43:16 by mvasquez         ###   ########.fr       */
+/*   Updated: 2025/11/03 09:28:40 by mvasquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,17 @@
 */
 
 #include "libft.h"
+
+static char	**free_split(char **res, int j)
+{
+	while (j >= 0)
+	{
+		free(res[j]);
+		j--;
+	}
+	free(res);
+	return (NULL);
+}
 
 static int	count_words(const char *s, char c)
 {
@@ -59,7 +70,7 @@ static char	*word_dup(const char *s, int start, int end)
 	return (word);
 }
 
-static void	split_words(char **res, const char *s, char c)
+static char	**split_words(char **res, const char *s, char c)
 {
 	size_t	i;
 	int		j;
@@ -74,12 +85,16 @@ static void	split_words(char **res, const char *s, char c)
 			index = i;
 		else if ((s[i] == c || s[i] == '\0') && index >= 0)
 		{
-			res[j++] = word_dup(s, index, i);
+			res[j] = word_dup(s, index, i);
+			if (!res[j])
+				return (free_split(res, j - 1));
+			j++;
 			index = -1;
 		}
 		i++;
 	}
 	res[j] = NULL;
+	return (res);
 }
 
 char	**ft_split(char const *s, char c)
@@ -91,8 +106,7 @@ char	**ft_split(char const *s, char c)
 	res = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
-	split_words(res, s, c);
-	return (res);
+	return (split_words(res, s, c));
 }
 
 /* #include <stdio.h>
