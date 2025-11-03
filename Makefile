@@ -1,5 +1,5 @@
 NAME		= libft.a
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 AR			= ar rcs
 RM			= rm -f
@@ -40,3 +40,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all, bonus, clean, fclean, re
